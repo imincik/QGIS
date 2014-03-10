@@ -1,3 +1,10 @@
+qgis (2.2.1-1+git20140310~ad77e0c~precise1) precise; urgency=low
+
+  * bug fix release based on current state of 'release-2_2' branch
+  * fixed inconsistencies int WMS GetFeatureInfo response
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Mon, 10 Mar 2014 14:19:04 +0100
+
 qgis (2.2.0-1) UNRELEASED; urgency=medium
 
   * enable globe on jessie
