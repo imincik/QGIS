@@ -1,3 +1,10 @@
+qgis (2.2.1-1+git20140310~ad77e0c~precise2) precise; urgency=low
+
+  * increasing build number to be able to upload to Launchpad after failed
+    attempt.
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Mon, 10 Mar 2014 14:30:12 +0100
+
 qgis (2.2.1-1+git20140310~ad77e0c~precise1) precise; urgency=low
 
   * bug fix release based on current state of 'release-2_2' branch
