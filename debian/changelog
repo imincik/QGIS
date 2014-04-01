@@ -1,3 +1,9 @@
+qgis (2.2.1-1+git20140401~305fb4f~precise1) precise; urgency=low
+
+  * New release.
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Tue, 01 Apr 2014 17:33:37 +0200
+
 qgis (2.2.1-1+git20140327~403914f~precise1) precise; urgency=low
 
   * New release.
