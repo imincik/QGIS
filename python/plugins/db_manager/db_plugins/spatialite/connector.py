@@ -26,7 +26,9 @@ from PyQt4.QtGui import *
 from ..connector import DBConnector
 from ..plugin import ConnectionError, DbError, Table
 
-from pyspatialite import dbapi2 as sqlite
+
+# require python-pysqlite2
+from pysqlite2 import dbapi2 as sqlite
 
 def classFactory():
 	return SpatiaLiteDBConnector
@@ -41,6 +43,10 @@ class SpatiaLiteDBConnector(DBConnector):
 
 		try:
 			self.connection = sqlite.connect( self._connectionInfo() )
+			self.connection.enable_load_extension(True)
+			self.cursor = self.connection.cursor()
+			self.cursor.execute("SELECT load_extension('libspatialite.so.5')")
+			self.cursor.close()
 
 		except self.connection_error_types(), e:
 			raise ConnectionError(e)
