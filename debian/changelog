@@ -1,3 +1,10 @@
+qgis (2.2.1-1+git20140417~4f20e17~precise1) precise; urgency=low
+
+  * adding all current upstream release-2_2 patches
+  * db manager: using pysqlite2 instead of pyspatialite for SpatiaLite connection
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Thu, 17 Apr 2014 14:05:16 +0200
+
 qgis (2.2.1-1+git20140401~305fb4f~precise1) precise; urgency=low
 
   * New release.
