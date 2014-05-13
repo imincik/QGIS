@@ -1,3 +1,11 @@
+qgis (2.2.99-1+git20140513~68690d9~precise1) precise; urgency=low
+
+  * adding all current upstream release-2_2 patches
+  * db manager: fix connection holding - idle in transaction (QGIS bug #7679)
+  * db manager: removing 'versioning' plugin
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Tue, 13 May 2014 14:45:11 +0200
+
 qgis (2.2.1-1+git20140417~4f20e17~precise1) precise; urgency=low
 
   * adding all current upstream release-2_2 patches
