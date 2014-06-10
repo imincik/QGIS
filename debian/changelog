@@ -1,3 +1,9 @@
+qgis (2.2.99-1+git20140610~08bb23d~precise1) precise; urgency=low
+
+  * db_manager: replace toPyObject() (old sip api; fixes #9991)
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Tue, 10 Jun 2014 15:35:57 +0200
+
 qgis (2.2.99-1+git20140513~68690d9~precise1) precise; urgency=low
 
   * adding all current upstream release-2_2 patches
