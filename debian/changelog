@@ -1,3 +1,11 @@
+qgis (2.2.99-1+git20140917~3525ef3~precise1) precise; urgency=low
+
+  * adding multiple db_manager fixes
+  * adding multiple mapserver fixes
+  * adding 'push_table' PostGIS plugin
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Wed, 17 Sep 2014 14:13:31 +0200
+
 qgis (2.2.99-1+git20140610~08bb23d~precise1) precise; urgency=low
 
   * db_manager: replace toPyObject() (old sip api; fixes #9991)
