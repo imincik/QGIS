@@ -59,6 +59,7 @@ class PostGisDBConnector(DBConnector):
 		self._checkRaster()
 		self._checkGeometryColumnsTable()
 		self._checkRasterColumnsTable()
+		self._checkComparatorSupport()
 
 	def _connectionInfo(self):
 		return unicode(self._uri.connectionInfo())
@@ -106,6 +107,14 @@ class PostGisDBConnector(DBConnector):
 			self.has_raster_columns_access = self.getTablePrivileges('raster_columns')[0]
 		return self.has_raster_columns
 
+	def _checkComparatorSupport(self):
+		""" check whether functions for checksumming needed for efficient remote table comparation are present """
+		c = self._execute(None, u"SELECT count(DISTINCT probin) FROM pg_proc WHERE probin IN ( '$libdir/pgc_checksum', '$libdir/pgc_casts' ) ;")
+		self.has_comparatorSupport = self._fetchone(c)[0] >= 2
+		self._close_cursor(c)
+		return self.has_comparatorSupport
+
+
 	def getInfo(self):
 		c = self._execute(None, u"SELECT version()")
 		res = self._fetchone(c)
@@ -136,6 +145,9 @@ class PostGisDBConnector(DBConnector):
 
 	def hasRasterSupport(self):
 		return self.has_raster
+
+	def hasComparatorSupport(self):
+		return self.has_comparatorSupport
 
 	def hasCustomQuerySupport(self):
 		from qgis.core import QGis
