@@ -1,3 +1,9 @@
+qgis (2.2.99-1+git20141002~28caa23~precise1) precise; urgency=low
+
+  * mapserver: fixed GetFeatureInfo request on raster layers 
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Thu, 02 Oct 2014 13:13:17 +0200
+
 qgis (2.2.99-1+git20140917~3525ef3~precise1) precise; urgency=low
 
   * adding multiple db_manager fixes
