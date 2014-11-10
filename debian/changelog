@@ -1,3 +1,10 @@
+qgis (2.2.99-1+git20141110~870f14c~precise1) precise; urgency=low
+
+  * gui: updated items in Help menu
+  * Splash image rebranding to 'GIS.lab Desktop'
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Mon, 10 Nov 2014 14:52:43 +0100
+
 qgis (2.2.99-1+git20141002~28caa23~precise1) precise; urgency=low
 
   * mapserver: fixed GetFeatureInfo request on raster layers 
