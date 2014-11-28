@@ -1,3 +1,9 @@
+qgis (2.2.99-1+git20141128~a2d3ccd~precise1) precise; urgency=low
+
+  * db_manager: do not display index tables when browsing SpatiaLite databases
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Fri, 28 Nov 2014 17:38:32 +0100
+
 qgis (2.2.99-1+git20141110~870f14c~precise1) precise; urgency=low
 
   * gui: updated items in Help menu
