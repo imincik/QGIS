@@ -1,3 +1,9 @@
+qgis (2.2.99-1+git20150115~374d0e6~precise1) precise; urgency=low
+
+  * adding fix for GetFeatureInfo request with FILTER and without BBOX
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Thu, 15 Jan 2015 17:17:59 +0100
+
 qgis (2.2.99-1+git20150114~b304ff9~precise1) precise; urgency=low
 
   * reverting to original QGIS splash image
