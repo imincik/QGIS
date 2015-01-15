@@ -1482,7 +1482,7 @@ int QgsWMSServer::featureInfoFromVectorLayer( QgsVectorLayer* layer,
     searchRect.set( infoPoint->x() - searchRadius, infoPoint->y() - searchRadius,
                     infoPoint->x() + searchRadius, infoPoint->y() + searchRadius );
   }
-  else
+  else if (mParameterMap.contains( "BBOX" ))
   {
     searchRect = layerRect;
   }
@@ -2017,6 +2017,7 @@ QMap<QString, QString> QgsWMSServer::applyRequestedLayerFilters( const QStringLi
           filterExtent.combineExtentWith( &layerExtent );
         }
       }
+      filterExtent.scale(1.01);
       mMapRenderer->setExtent( filterExtent );
     }
   }
