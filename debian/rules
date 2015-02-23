@@ -39,7 +39,7 @@ GRASS=grass$(subst .,,$(shell pkg-config --modversion grass|cut -d. -f1,2))
 
 CMAKE_OPTS := \
 	-D BUILDNAME=$(DEB_BUILD_NAME) \
-	-D GRASS_PREFIX=/usr/lib/grass64 \
+	-D WITH_GRASS=FALSE \
 	-D CMAKE_INSTALL_PREFIX=/usr \
 	-D BINDINGS_GLOBAL_INSTALL=TRUE \
 	-D PEDANTIC=TRUE \
@@ -204,10 +204,6 @@ binary-arch: build install
 	install -o root -g root -m 755 -d $(CURDIR)/debian/qgis/usr/bin
 	install -o root -g root -m 755 $(CURDIR)/debian/tmp/usr/bin/qgis $(CURDIR)/debian/qgis/usr/bin
 	install -o root -g root -m 755 $(CURDIR)/debian/tmp/usr/bin/qbrowser $(CURDIR)/debian/qgis/usr/bin
-
-	install -o root -g root -m 755 -d $(CURDIR)/debian/qgis-plugin-grass/usr/bin
-	install -o root -g root -m 755 $(CURDIR)/debian/qgis.sh $(CURDIR)/debian/qgis-plugin-grass/usr/bin/qgis
-	install -o root -g root -m 755 $(CURDIR)/debian/qgis.sh $(CURDIR)/debian/qgis-plugin-grass/usr/bin/qbrowser
 	
 	dh_sip
 	dh_python2 --no-guessing-versions
@@ -222,7 +218,7 @@ binary-arch: build install
 	dh_fixperms
 	dh_makeshlibs
 	dh_installdeb
-	dh_shlibdeps -l/usr/lib/$(GRASS)/lib
+	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

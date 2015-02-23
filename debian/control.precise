@@ -7,7 +7,6 @@ Build-Depends:
  cmake (>= 2.8),
  debhelper (>= 7),
  flex,
- grass-dev,
  libexpat1-dev,
  libfcgi-dev,
  libgdal-dev (>= 1.9.0) | libgdal1-dev (<< 1.9.0),
@@ -47,7 +46,7 @@ Homepage: http://qgis.org/
 Package: qgis
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, qgis-providers (= ${binary:Version}), qgis-common (= ${source:Version})
-Recommends: qgis-plugin-grass, python-qgis, qgis-plugin-globe
+Recommends: python-qgis, qgis-plugin-globe
 Suggests: gpsbabel
 Conflicts: uim-qt3
 Description: Geographic Information System (GIS)
@@ -84,7 +83,6 @@ Package: libqgis-dev
 Architecture: any
 Section: libdevel
 Depends:
- grass-dev,
  libexpat1-dev,
  libgdal-dev (>= 1.9.0) | libgdal1-dev (<< 1.9.0),
  libgeos-dev (>= 3.0.0),
@@ -106,27 +104,6 @@ Description: QGIS - development files
  .
  This package contains the headers and libraries needed to develop plugins for
  QGIS.
-
-Package: qgis-plugin-grass
-Architecture: any
-Depends: qgis (= ${binary:Version}), qgis-plugin-grass-common (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}, grass{GRASS_ABI}
-Description: GRASS plugin for QGIS
- QGIS is a Geographic Information System (GIS) which manages, analyzes and
- display databases of geographic information.
- .
- This plugin enables GRASS data access in the QGIS geographic data viewer.
-
-Package: qgis-plugin-grass-common
-Architecture: all
-Depends: python, ${python:Depends}, ${misc:Depends}
-Replaces: qgis-common (<< 1.5)
-Breaks: qgis-common (<< 1.5)
-Description: GRASS plugin for QGIS - architecture-independent data
- QGIS is a Geographic Information System (GIS) which manages, analyzes and
- display databases of geographic information.
- .
- This package contains architecture-independent supporting data files for use
- with the QGIS GRASS plugin.
 
 Package: python-qgis
 Section: python
