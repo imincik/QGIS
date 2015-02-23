@@ -1,3 +1,9 @@
+qgis (2.2.99-1+git20150223~c2466ab~precise1) precise; urgency=low
+
+  * Removing GRASS plugin from Debian packaging.
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Mon, 23 Feb 2015 22:23:11 +0100
+
 qgis (2.2.99-1+git20150123~f39b79b~precise1) precise; urgency=low
 
   * updating QGIS splash image to QGIS - GIS.lab edition
