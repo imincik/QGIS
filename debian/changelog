@@ -1,4 +1,10 @@
-qgis (2.2.99-2+git20150223~c2466ab~precise1) precise; urgency=low
+qgis (2.2.99-1+git20150325~7a01a8a~precise1) precise; urgency=low
+
+  * adding fix for SpatiaLite stats after adding new column
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Wed, 25 Mar 2015 16:02:06 +0100
+
+qgis (2.2.99-1+git20150223~c2466ab~precise1) precise; urgency=low
 
   * Removing GRASS plugin from Debian packaging.
 
